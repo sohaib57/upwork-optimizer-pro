@@ -1,0 +1,43 @@
+{
+  "name": "upwork-optimizer-pro",
+  "version": "1.0.0",
+  "description": "Professional Chrome extension for analyzing and optimizing Upwork profiles",
+  "main": "manifest.json",
+  "scripts": {
+    "build": "echo 'Extension built successfully'",
+    "dev": "echo 'Development mode - load extension in Chrome'",
+    "test": "echo 'Run tests'",
+    "lint": "echo 'Lint code'",
+    "package": "echo 'Package extension for distribution'"
+  },
+  "keywords": [
+    "upwork",
+    "freelance",
+    "profile",
+    "optimization",
+    "chrome-extension",
+    "analysis",
+    "freelancer",
+    "upwork-tools"
+  ],
+  "author": "Upwork Optimizer Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/upwork-optimizer-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/upwork-optimizer-pro/issues"
+  },
+  "homepage": "https://github.com/yourusername/upwork-optimizer-pro#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 88"
+  ]
+}

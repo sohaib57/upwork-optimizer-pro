@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upwork Profile Optimizer Pro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 380px;
+      min-height: 500px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+    }
+
+    .header {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .header p {
+      font-size: 12px;
+      color: #7f8c8d;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+    }
+
+    .score-section {
+      text-align: center;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      border-radius: 12px;
+      color: white;
+    }
+
+    .score-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .score-label {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ecf0f1;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      color: #7f8c8d;
+      transition: all 0.3s ease;
+    }
+
+    .tab.active {
+      color: #3498db;
+      border-bottom: 2px solid #3498db;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .suggestion-item {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border-left: 4px solid;
+      background: #f8f9fa;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .suggestion-critical {
+      border-left-color: #e74c3c;
+      background: #fdf2f2;
+    }
+
+    .suggestion-important {
+      border-left-color: #f39c12;
+      background: #fef9e7;
+    }
+
+    .suggestion-optional {
+      border-left-color: #3498db;
+      background: #f0f8ff;
+    }
+
+    .suggestion-good {
+      border-left-color: #27ae60;
+      background: #f0fff4;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #7f8c8d;
+      margin-top: 5px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #ecf0f1;
+      color: #2c3e50;
+    }
+
+    .btn-secondary:hover {
+      background: #d5dbdb;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #7f8c8d;
+    }
+
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #3498db;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 10px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .error {
+      background: #fdf2f2;
+      border: 1px solid #fecaca;
+      color: #dc2626;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .success {
+      background: #f0fff4;
+      border: 1px solid #bbf7d0;
+      color: #16a34a;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .footer {
+      padding: 15px 20px;
+      background: #f8f9fa;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      font-size: 11px;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🚀 Upwork Optimizer Pro</h1>
+    <p>Professional Profile Analysis & Optimization</p>
+  </div>
+
+  <div class="container">
+    <!-- Score Section -->
+    <div class="score-section" id="scoreSection" style="display: none;">
+      <div class="score-circle" id="scoreCircle">--</div>
+      <div class="score-label" id="scoreLabel">Profile Score</div>
+    </div>
+
+    <!-- Action Buttons -->
+    <button class="btn btn-primary" id="analyzeBtn">🔍 Analyze Profile</button>
+    <button class="btn btn-secondary" id="refreshBtn">🔄 Refresh Analysis</button>
+
+    <!-- Loading State -->
+    <div class="loading" id="loadingState" style="display: none;">
+      <div class="spinner"></div>
+      <p>Analyzing profile...</p>
+    </div>
+
+    <!-- Error State -->
+    <div class="error" id="errorState" style="display: none;"></div>
+
+    <!-- Success State -->
+    <div class="success" id="successState" style="display: none;"></div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="suggestions">Suggestions</button>
+      <button class="tab" data-tab="stats">Statistics</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="tab-content active" id="overviewTab">
+      <div id="overviewContent">
+        <p style="text-align: center; color: #7f8c8d; font-size: 13px;">
+          Click "Analyze Profile" to get started
+        </p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="suggestionsTab">
+      <div id="suggestionsContent"></div>
+    </div>
+
+    <div class="tab-content" id="statsTab">
+      <div class="stats-grid" id="statsGrid"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Made with ❤️ for Upwork freelancers</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
