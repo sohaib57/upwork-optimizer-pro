@@ -142,7 +142,7 @@ upwork-optimizer-extension/
 ### Building from Source
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/upwork-optimizer-pro.git
+git clone https://github.com/sohaib57/upwork-optimizer-pro
 
 # Navigate to project directory
 cd upwork-optimizer-pro
@@ -239,8 +239,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Email**: support@upworkoptimizer.com
-- **GitHub**: [Issues](https://github.com/yourusername/upwork-optimizer-pro/issues)
+- **Email**: sohaibbutt57@gmail.com
+- **GitHub**: [Issues](https://github.com/sohaib57/upwork-optimizer-pro/issues)
 - **Discord**: [Join our community](https://discord.gg/upworkoptimizer)
 
 ---
